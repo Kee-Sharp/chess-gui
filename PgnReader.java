@@ -498,6 +498,7 @@ public class PgnReader {
      * @return      a String with all of the content of the file
      */
     public static String fileContent(String path) {
+        System.out.println(path);
         Path file = Paths.get(path);
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = Files.newBufferedReader(file)) {
@@ -518,12 +519,12 @@ public class PgnReader {
      */
     public static List<ChessGame> getChessGames() {
         List<ChessGame> games = new ArrayList<ChessGame>();
-        File hw6 = new File(new File(".").getAbsolutePath());
+        File hw6 = new File(new File("./pgnGames").getAbsolutePath());
         File[] pgnFiles = hw6.listFiles(pathname -> {
                 return pathname.getName().contains(".pgn");
             });
         for (File f : pgnFiles) {
-            String data = fileContent(f.getName());
+            String data = fileContent("pgnGames/" + f.getName());
             ChessGame game = new ChessGame(tagValue("Event", data),
                 tagValue("Site", data), tagValue("Date", data),
                 tagValue("White", data), tagValue("Black", data),
