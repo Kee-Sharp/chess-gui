@@ -248,13 +248,13 @@ public class ChessGui extends Application {
             "Event: %s%nSite: %s%nDate: %s%nWhite: %s%nBlack: %s%nResult: %s%n"
             + "Opening: %s", c.getEvent(), c.getSite(), c.getDate(),
             c.getWhite(), c.getBlack(), c.getResult(), c.getOpening()));
-        List<Image> pieces = new ArrayList<>(Arrays.asList(new Image("wking.png"
-            ), new Image("wqueen.png"), new Image("wbishop.png"),
-            new Image("wrook.png"), new Image("wknight.png"),
-            new Image("wpawn.png"), new Image("bking.png"),
-            new Image("bqueen.png"), new Image("bbishop.png"),
-            new Image("brook.png"), new Image("bknight.png"),
-            new Image("bpawn.png")));
+        List<Image> pieces = new ArrayList<>(Arrays.asList(new Image("images/wking.png"
+            ), new Image("images/wqueen.png"), new Image("images/wbishop.png"),
+            new Image("images/wrook.png"), new Image("images/wknight.png"),
+            new Image("images/wpawn.png"), new Image("images/bking.png"),
+            new Image("images/bqueen.png"), new Image("images/bbishop.png"),
+            new Image("images/brook.png"), new Image("images/bknight.png"),
+            new Image("images/bpawn.png")));
         MyImageView wK = new MyImageView(pieces.get(0));
         MyImageView wQ = new MyImageView(pieces.get(1));
         MyImageView wB = new MyImageView(pieces.get(2));
